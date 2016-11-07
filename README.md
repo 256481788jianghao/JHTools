@@ -11,4 +11,5 @@ editer   ---- i want it like sourceinsight
 
 #directory
 
-Test --- include all test cases or demo.
+Test   --- include all test cases or demo.
+Src/Common --- include common js or css for all tools.
