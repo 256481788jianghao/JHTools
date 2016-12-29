@@ -7,7 +7,16 @@
     <title></title>
 </head>
 <body>
+<p>Please enter your database file</p>
+<input type="file" id="db_file">
 <script>
+    var gDataBase = {};//JSON DB
+    $("#db_file").on("change",function(){
+        var dataBasePath = $("#db_file").val();
+        jhUtils.debug("star dataBasePath="+dataBasePath);
+
+    });
+
 </script>
 </body>
 </html>
