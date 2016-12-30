@@ -6,21 +6,17 @@
     <script src="./Common/jh_utils.js"></script>
     <script src="./Common/jh_file.js"></script>
     <script src="./Common/jh_db.js"></script>
+    <script src="./Common/jh_application.js"></script>
     <title></title>
 </head>
 <body>
 <p>Please enter your database file</p>
 <input type="file" id="db_file">
 <script>
-    var gDataBase = {};//JSON DB
+    var dataBase = {};
     $("#db_file").on("change",function(){
         var dataBasePath = $("#db_file").val();
 	var dataBase = new JHDB(dataBasePath);
-	dataBase.insert("jh",1);
-	dataBase.update();
-	var str = jhFile.readFile(dataBasePath);
-	jhUtils.debug("str="+str);
-
     });
 
 </script>
