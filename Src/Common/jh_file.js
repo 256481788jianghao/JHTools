@@ -13,7 +13,7 @@ var jhFile = new function(){
     this.readFile = function(path){
         return fileObj.readFileSync(path,'utf8');
     };
-    this.writeFile = function(pathi,str){
+    this.writeFile = function(path,str){
         return fileObj.writeFileSync(path,str,'utf8');
     }
 
