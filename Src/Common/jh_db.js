@@ -2,8 +2,8 @@ function JHDB(dbPath){
     var m_path = dbPath;
     var dataObj = {};
     this.revert = function(){
-        var dataJsonStr = jhFile.readFile(m_path);
         try{
+            var dataJsonStr = jhFile.readFile(m_path);
             dataObj = JSON.parse(dataJsonStr);
         }catch(e){
             dataOjb = {};
