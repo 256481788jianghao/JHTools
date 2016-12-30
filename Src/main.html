@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="./Common/jquery-3.1.1.js"></script>
     <script src="./Common/jh_utils.js"></script>
+    <script src="./Common/jh_file.js"></script>
     <title></title>
 </head>
 <body>
@@ -14,6 +15,8 @@
     $("#db_file").on("change",function(){
         var dataBasePath = $("#db_file").val();
         jhUtils.debug("star dataBasePath="+dataBasePath);
+	var str = jhFile.readFile(dataBasePath);
+	jhUtils.debug("str="+str);
 
     });
 
