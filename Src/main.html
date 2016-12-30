@@ -5,6 +5,7 @@
     <script src="./Common/jquery-3.1.1.js"></script>
     <script src="./Common/jh_utils.js"></script>
     <script src="./Common/jh_file.js"></script>
+    <script src="./Common/jh_db.js"></script>
     <title></title>
 </head>
 <body>
@@ -14,7 +15,9 @@
     var gDataBase = {};//JSON DB
     $("#db_file").on("change",function(){
         var dataBasePath = $("#db_file").val();
-        jhUtils.debug("star dataBasePath="+dataBasePath);
+	var dataBase = new JHDB(dataBasePath);
+	dataBase.insert("jh",1);
+	dataBase.update();
 	var str = jhFile.readFile(dataBasePath);
 	jhUtils.debug("str="+str);
 
