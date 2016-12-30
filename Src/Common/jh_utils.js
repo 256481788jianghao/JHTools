@@ -4,15 +4,15 @@
 
 var jhUtils = new function(){
     var  self = this;
-    this.debug = function(str){
+    this.debug = function(str,tag){
         if(console.log){
-            console.log(str);
+            console.log(str+" tag="+tag);
         }
     };
-    this.err = function(str){
-        this.debug("===[err]===:"+str);
+    this.err = function(str,tag){
+        this.debug("===[err]===:"+str,tag);
     };
-    this.warn = function(str){
-        this.debug("===[warnning]===:"+str);
+    this.warn = function(str,tag){
+        this.debug("===[warnning]===:"+str,tag);
     };
 };
