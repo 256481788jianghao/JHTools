@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' href='Common/common.css'></link>
     <script src="./Common/jquery-3.1.1.js"></script>
     <script src="./Common/jh_utils.js"></script>
     <script src="./Common/jh_file.js"></script>
@@ -17,6 +18,8 @@
     $("#db_file").on("change",function(){
         var dataBasePath = $("#db_file").val();
 	var dataBase = new JHDB(dataBasePath);
+        var testApp = new JHApplication("test",dataBase);
+        testApp.showInsertDialog();
     });
 
 </script>

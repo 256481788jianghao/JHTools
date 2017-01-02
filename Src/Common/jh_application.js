@@ -11,4 +11,7 @@ JHApplication.prototype.backMain = function(){
     this.dataBase.update();
     window.location.reload();
 }
+JHApplication.prototype.showInsertDialog = function(){
+    $("body").append('<div id="app_insertDialog"><\div>');
+}
 
